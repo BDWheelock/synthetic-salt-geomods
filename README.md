@@ -1,7 +1,7 @@
 # synthetic-salt-geomods
 Meant for training deep generative models for a specific geology, this is a data set of synthetically produced subsurface property models (density, Vp, Vs), exhibiting various salt formations embedded in stacks of sinusoidal layers below a water column.
 
-Description:
+## Description:
 
 The simulator we have used creates depth-section images of synthetic subsurface configurations by sequentially depositing single-pixel layers of material that follow sinusoidal paths with semi-random amplitudes and phases. That is, these layers are grouped into ``sequences'' and ``para-sequences'' where the para-sequences will draw distinct random values for their amplitude and phase, while the sequences will maintain the same sinusoidal characteristics and therefore layer morphology. The sequences are nested inside the para-sequences to create some depth continuity of morphology. The sequences (the inner-loop of layer grouping) also draw from a small set of facies such that layer property values within them may repeat, with facies indices also drawn at random. The para-sequences operate on top of this loop by gradually shifting the set of facies available to a sequence within a para-sequence. The shift of facies between para-sequences is meant to simulate long-term changes in environments of deposition, while also allowing for the imposition of a compaction trend with depth. 
 
